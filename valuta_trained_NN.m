@@ -28,7 +28,7 @@ ECG_CINC.dati=[ECG_PRO(:)' ECG_mean];
     im = ind2rgb(im2uint8(rescale(cfs)),jet(128));
     imwrite(imresize(im,[227 227]),'NEW_IMAGE.jpg');
     ECG_image=imread('NEW_IMAGE.jpg');
-    ECG_image=imresize(ECG_image,[227 227]);   %for squeeze net networks
+  %  ECG_image=imresize(ECG_image,[227 227]);   %for squeeze net networks
     if(K_OPT_NN==3), ECG_image=im2uint8(imresize(im,[224 224])); end
     
     fprintf('Image- size:');fprintf('%6.0f',size(ECG_image));
